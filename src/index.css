@@ -2,3 +2,7 @@
 @theme {
     --color-mint-500: oklch(0.72 0.11 178);
 }
+
+a.active {
+    @apply bg-gray-400;
+}
