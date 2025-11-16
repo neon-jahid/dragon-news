@@ -1,9 +1,14 @@
-import React from 'react';
-import { useParams } from 'react-router';
+import React, { useEffect } from 'react';
+import { useLoaderData, useParams } from 'react-router';
 
 function CategoryNews() {
     const { id } = useParams();
-    console.log(id);
+    const data = useLoaderData();
+    useEffect(() => {
+        const filteredNews = data.filter((news) => news.category_id == id);
+
+        console.log(filteredNews);
+    }, [data, id]);
 
     return <div>CategoryNews -{id}</div>;
 }
