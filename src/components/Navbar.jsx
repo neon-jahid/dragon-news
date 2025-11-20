@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Navigate, NavLink } from 'react-router';
 import Button from '../common/Button';
 import { data } from '../assets/asset';
 
@@ -9,6 +9,7 @@ function Navbar() {
             <div></div>
             <div className='nav flex gap-6'>
                 <NavLink to='/'>Home</NavLink>
+
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/career'>Career</NavLink>
             </div>
@@ -17,7 +18,9 @@ function Navbar() {
                     src={data.userLogo}
                     alt=''
                 />
-                <Button>Login</Button>
+                <NavLink to={'auth/login'}>
+                    <Button>Login</Button>
+                </NavLink>
             </div>
         </div>
     );
