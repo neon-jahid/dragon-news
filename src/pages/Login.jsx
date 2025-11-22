@@ -88,14 +88,12 @@ function Login() {
                                     Sign in
                                 </button>
                             </div>
-                            <p className='text-slate-900 text-sm !mt-6 text-center'>
+                            <p className='text-slate-900 text-sm mt-6! text-center'>
                                 Don't have an account?{' '}
-                                <NavLink>
-                                    <a
-                                        href='javascript:void(0);'
-                                        className='text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold'>
-                                        Register here
-                                    </a>
+                                <NavLink
+                                    to={'/auth/register'}
+                                    className='text-blue-600 hover:underline ml-1 whitespace-nowrap font-semibold'>
+                                    Register here
                                 </NavLink>
                             </p>
                         </form>

@@ -2,11 +2,15 @@ import React from 'react';
 import { Navigate, NavLink } from 'react-router';
 import Button from '../common/Button';
 import { data } from '../assets/asset';
+import { AuthContext } from '../provider/Auth/AuthContext';
+import { use } from 'react';
 
 function Navbar() {
+    const { user } = use(AuthContext);
+
     return (
         <div className='flex justify-between w-11/12'>
-            <div></div>
+            <div>{user && user.email}</div>
             <div className='nav flex gap-6'>
                 <NavLink to='/'>Home</NavLink>
 
