@@ -10,19 +10,19 @@ function CategoryNews() {
 
     const [categoryNews, setCategoryNews] = useState([]);
 
-    // useEffect(() => {
-    //     if (id == '0') {
-    //         setCategoryNews(data);
-    //         return;
-    //     } else if (id == '1') {
-    //         const filteredNews = data.filter((news) => news.others.is_today_pick == true);
-    //         setCategoryNews(filteredNews);
-    //     } else {
-    //         const filteredNews = data.filter((news) => news.category_id == id);
-    //         setCategoryNews(filteredNews);
-    //         console.log(filteredNews);
-    //     }
-    // }, [data, id]);
+    useEffect(() => {
+        if (id == '0') {
+            setCategoryNews(data);
+            return;
+        } else if (id == '1') {
+            const filteredNews = data.filter((news) => news.others.is_today_pick == true);
+            setCategoryNews(filteredNews);
+        } else {
+            const filteredNews = data.filter((news) => news.category_id == id);
+            setCategoryNews(filteredNews);
+            console.log(filteredNews);
+        }
+    }, [data, id]);
 
     return (
         <div>
